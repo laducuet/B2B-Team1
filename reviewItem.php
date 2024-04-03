@@ -62,7 +62,7 @@ if ($do == 'Manage') {
     </div>
     <div class="product">
       <a class="seller-name" style="text-decoration:none; color:black;"
-        href="profileSeller.php?id=<?php echo $item['sellerId'] ?>">By:
+        href="seller.php?id=<?php echo $item['sellerId'] ?>">By:
         <?php echo $item['fName'] . ' ' . $item['lName']; ?></a>
       <hr>
       <span class="date-of-item">Added in : <?php echo $item['addDate']; ?></span>
