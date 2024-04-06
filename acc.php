@@ -101,9 +101,9 @@
                   <?php endif; ?>
                 </div>
                 <div class="card-body">
-                  <?php if($ite['quantity']==0): ?>
-                  <span class="badge p-3 rounded-pill bg-danger">Sold Out!</span>
-                  <?php else: ?>
+                                    <?php if($ite['quantity'] == 0): ?>
+                                    <span class="badge p-3 rounded-pill bg-danger">Sold Out!</span>
+                                    <?php else: ?>
                   <a href="<?php echo "reviewitem.php?do=Manage&itemId=" . $ite['itemId'] . "&itemName=" . $ite['title'] ?>"
                     class="btn btn-success">Review</a>
                   <?php endif; ?>
