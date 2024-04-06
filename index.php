@@ -28,8 +28,8 @@
 
 
 
-<div class="container">
-		<main>
+<div class="container" >
+		<main style = "box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;">
 			<div class="text-center">
 				<?php if(isset($_GET['keyword'])): ?>
 					<?php if ($inputSearchError) :?>
@@ -43,16 +43,16 @@
 						<?php header("Location: searchItem.php?keyword=".$_GET['keyword']); ?>
 					<?php endif ?>
 				<?php else : ?>
-			<div class="breadcrumb">
+			<div class="breadcrumb" style = "background-color: #FFBE98;">
 			</div> <!-- End of Breadcrumb-->
 
 			<div class="new-product-section shop">
-				<div class="sidebar">
+				<div class="sidebar" style = "width:16%;">
 					<div class="sidebar-widget">
 						<h3>Category</h3>
 						<ul>
 							<?php foreach($categories as $cat): ?>
-								<li><a href="<?php echo "childcat.php?cat=".urlencode($cat['categoryId']); ?>"><?php echo $cat['categoryName'] ?></a></li>
+								<li style = "text-align:left;padding-bottom:12px;padding-left:25px;"><a href="<?php echo "childcat.php?cat=".urlencode($cat['categoryId']); ?>" style = "font-weight:bold;font-family:candara;font-size:16px;"><?php echo $cat['categoryName'] ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -74,16 +74,16 @@
 										echo $image_path;
 									?>">
 								</a>
-								<div class="product-detail">
-									<h3><?php echo $cat['categoryName'] ?></h3>
-									<a href="<?php echo "childcat.php?cat=".urlencode($cat['categoryId']); ?>">VIEW MORE</a>
+								<div class="product-detail" style = "display:flex;flex-direction:column;justify-content: center; align-items: center;padding:10px;">
+									<h3 style><?php echo $cat['categoryName'] ?></h3>
+									<a href="<?php echo "childcat.php?cat=".urlencode($cat['categoryId']); ?>" style="font-family:candara;">VIEW MORE</a>
 								</div>
 							</div>
 					<?php endforeach; ?>
 				</div>	
 			</div> <!-- New Product Section -->	
 			<div class="load-more">
-				<a href="#">Load More</a>
+				<a href="#" style = "font-family:candara;font-weight:bold;font-size:20px;">Load More</a>
 			</div>	
 			<?php endif ?>	
 		</main> <!-- Main Area -->

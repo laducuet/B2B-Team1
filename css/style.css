@@ -618,7 +618,7 @@ main .new-product-section.shop{
 	display: flex;
 }
 main .new-product-section.shop .sidebar{
-	width: 23%;
+	width: 15%;
 	margin-right: 2%;
 	border-right: 1px solid #eee;
 	padding-right: 10px; 
