@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'admin/connect.php';
 
 //Routes 
@@ -13,7 +13,10 @@ $dataimages = "data/uploads/items/";
 require $func . 'functions.php';
 require $tpl . "header.php";
 
-if(!isset($noNavbar)) { require $tpl . "navbar.php"; }
-elseif (isset($noNavbar)) {require $func . 'controller.php';}
+if (!isset($noNavbar)) {
+    require $tpl . "navbar.php";
+} elseif (isset($noNavbar)) {
+    require $func . 'controller.php';
+}
 
 ?>

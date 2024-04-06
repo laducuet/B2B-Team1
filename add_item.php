@@ -178,14 +178,14 @@ if (isset($_POST['done'])) {
                                 echo $_SESSION["description_er"];
                                 unset($_SESSION["description_er"]);
                             } ?></p>
-                            <div class=" mb-4 input-group">
+                        <div class=" mb-4 input-group">
             <textarea placeholder="Information(For Game)" rows="2" class="form-control" id="exampleFormControlTextarea1"
                       name="information"><?php if (isset($_SESSION["information_item"])) {
                     echo $_SESSION["information_item"];
                     unset($_SESSION["information_item"]);
                 }; ?></textarea>
                         </div>
-                        
+
                         <div class="input-group  mb-4">
                             <select required value="<?php if (isset($_SESSION["childcategoryId"])) {
                                 echo $_SESSION["childcategoryId"];
