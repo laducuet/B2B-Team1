@@ -40,7 +40,7 @@ header("Location: signin.php");
 ?>
 <?php if(isset($_SESSION["username"])): ?>
 	
-  <header style = "background-color:#FFBE98;">
+  <header style = "background-color:#FFBE98;">  
 		<div class="container" >
 			<div class="brand">
 				<div class="logo">
@@ -123,15 +123,15 @@ header("Location: signin.php");
 		</div> <!-- container -->
 	</header> <!-- header -->
 <?php else: ?>
-  <header>
+  <header style = "background-color:#FFBE98;">
 		<div class="container">
 			<div class="brand">
 				<div class="logo">
 					<a href="index.php">
 						<img src="img/icons/online_shopping.png">
 						<div class="logo-text">
-							<p class="big-logo">Electronic Commerce</p>
-							<p class="small-logo">Team 1</p>
+							<p class="big-logo" style = "font-family: candara;line-height: 1.15; padding: 20px;font-size:30px;">Electronic Commerce</p>
+							<!-- <p class="small-logo">Team 1</p> -->
 						</div>
 					</a>
 				</div> <!-- logo -->
@@ -139,25 +139,25 @@ header("Location: signin.php");
 				<div class="search-bar">
 					<form action="searchItem.php" method="GET">
   <div class="form-group">
-    <input type="text" class="form-control" name="keyword" placeholder="Search">
+    <input type="text" class="form-control" name="keyword" placeholder="Type here to search..." style = "font-family: Arial, sans-serif;line-height: 1.15">
     <img src="img/icons/search.png">
   </div>
 </form>
 				</div>
 			</div> <!-- menu -->
 				<div class="shop-icon">
-          <div class="dropdown">
+          <div class="dropdown" style = "margin-right: 5px;">
           <a href="signin.php">
 						<img src="img/icons/signin.png">
           </a>
 					</div>
-					<div class="dropdown">
+					<div class="dropdown" style = "margin-right: 5px;">
           <a href="signup.php">
-						<img src="img/icons/signup.png">
+						<img src="img/icons/signup.png" >
           </a>
 					</div>
-          <div class="dropdown">
-          <a href="about.php">
+          <div class="dropdown" style = "margin-right: 5px;">
+          <a href="about.php" >
 						<img src="img/icons/aboutus.png">
             </a>
 					</div>

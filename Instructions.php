@@ -26,7 +26,7 @@
 		<main>
 			<div class="about">
 				<h2 class="heading">Instructions</h2>
-				<p>Instructions for registration, login, product posting, purchase ...</p>
+				<p style = "font-family:candara;letter-spacing: 0.05em;">Instructions for registration, login, product posting, purchase ...</p>
 			</div>
 		</main> <!-- Main Area -->
 	</div>
