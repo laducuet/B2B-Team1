@@ -1,7 +1,7 @@
 <?php
 $noNavbar = '';
 $pageTitle = 'SignIn';
-$images = "layout/images/";
+$images = "public/layout/images/";
 include "init.php";
 session_start();
 if (isset($_POST['username']))
@@ -63,7 +63,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 ?>
     <div class="container-fluid text-center shadow p-2">
         <a href="index.php" class="navbar-brand" style="text-decoration: none;color: black">
-            <img src="img/icons/online_shopping.png" width="50" height="50" alt="logo">
+            <img src="public/img/icons/online_shopping.png" width="50" height="50" alt="logo">
             Team 1
         </a>
     </div>

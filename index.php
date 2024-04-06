@@ -72,7 +72,7 @@ if (isset($_GET['keyword'])) {
                             <div class="product">
                                 <a href="<?php echo "childcat.php?cat=" . urlencode($cat['categoryId']); ?>">
                                     <img src="<?php
-                                    $image_path = "layout/images/" . $cat['categoryName'] . ".png";
+                                    $image_path = "public/layout/images/" . $cat['categoryName'] . ".png";
                                     echo $image_path;
                                     ?>">
                                 </a>

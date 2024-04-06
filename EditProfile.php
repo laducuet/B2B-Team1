@@ -1,7 +1,7 @@
 <?php
 ob_start();
 $pageTitle = 'Edit profile';
-$images = "layout/images/";
+$images = "public/layout/images/";
 include "init.php";
 
 // if not signed in return to sign in

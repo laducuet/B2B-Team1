@@ -1,7 +1,7 @@
 <?php
 ob_start();
 $pageTitle = 'Orders';
-$images = "layout/images/";
+$images = "public/layout/images/";
 include "init.php";
 
 $sellerData = getSeller($db, $_SESSION['username'])[0];

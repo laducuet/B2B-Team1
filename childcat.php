@@ -58,7 +58,7 @@ if (isset($_GET['cat'])) {
                                         </p>
                                         <div class="tshirt_img" style="line-height: 270px;">
                                             <img src="<?php
-                                            $image_path = "layout/images/" . $childcat['childcategoryName'] . ".jpg";
+                                            $image_path = "public/layout/images/" . $childcat['childcategoryName'] . ".jpg";
                                             echo $image_path;
                                             ?>">
                                         </div>

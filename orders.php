@@ -1,7 +1,7 @@
 <?php
 ob_start();
 $pageTitle = 'Orders';
-$images = "layout/images/";
+$images = "public/layout/images/";
 include "init.php";
 if (!isset($_SESSION['username'])) {
     header("location: signin.php");
