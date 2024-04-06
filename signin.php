@@ -61,19 +61,21 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 }
 
 ?>
-    <div class="container-fluid text-center shadow p-2">
-        <a href="index.php" class="navbar-brand"  style="text-decoration: none;color: black">
+    <div class="container-fluid text-center shadow p-2" style="position: sticky; top:0; opacity: 1; background-color: white; z-index:100000;">
+        <a href="index.php" class="navbar-brand"  
+        style="text-decoration: none;color: black; font-family: 
+        MyCustomFont, Arial, sans-serif; font-weight: bold; font-size: 30px; margin-top: 30px">
         <img src="img/icons/online_shopping.png" width="50" height="50" alt="logo" >
-            Team 1
+            Electronic Commerce
         </a>
     </div>
-    <div class="row justify-content-evenly container-fluid">
+    <div class="row justify-content-evenly container-fluid" style="">
         <div class="col-md-10 row justify-content-center m-5 text-center shadow">
             <div class="col-lg-5 col-md-12">
                 <form method="POST" action="signin.php" class="form-signin p-5">
                     <h3 class="m-3">Sign in to your account</h3>
-                    <p class="lead m-3">Team 1 </p>
-                    <div class="input-group mb-4">
+                    
+                    <div class="input-group mb-4" >
                         <input type="text" required id="username" class="form-control" placeholder="Username"
                                name="username"
                                value="<?php
@@ -83,12 +85,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                                }
                                else{
                                    echo "";
-                               }?>">
+                               }?>" style = "font-family:candara;">
                         <span class="input-group-text">@</span>
                     </div>
                     <div class="input-group mb-4">
                         <input type="password" required id="password" class="form-control" placeholder="Password"
-                               name="password">
+                               name="password" style = "font-family:candara;">
                         <span class="input-group-text" onclick="togglePasswordVisibility()">
             <i class="bi bi-eye" id="eyeIcon"></i>
           </span>
@@ -99,24 +101,30 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         unset($_SESSION['error']);
                     }
                     ?>
-                    <p class="mb-4 text-secondary">By clicking Sign In, you agree to our <a href="#"
-                                                                                            class="link-primary">Terms
+                    <p class="mb-4 text-secondary" style = "font-family:candara;">By clicking Sign In, you agree to our <a href="#"
+                                                                                            class="link-primary" style = "font-family:candara;">Terms
                             of
-                            Use</a> and our <a href="#" class="link-primary">Privacy Policy</a>.</p>
+                            Use</a> and our <a href="#" class="link-primary" style = "font-family:candara;">Privacy Policy</a>.</p>
                     <div class="d-grid gap-2">
                         <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
-                               value="Sign-in">
+                               value="Sign-in" style = "font-family:candara;">
                     </div>
-                    <span class="d-block text-left my-4 text-muted">— or signup —</span>
+                    <span class="d-block text-left my-4 text-muted" style = "font-family:candara;">— or sign up —</span>
                     <a href="signup.php" type="button"
-                       class="btn btn-block btn-success text-white rounded-pill btn-lg ps-5 pe-5">Sign-up
+                       class="btn btn-block btn-success text-white rounded-pill btn-lg ps-5 pe-5" style = "font-family:candara;">Sign-up
                     </a>
                 </form>
             </div>
             <div class="col-lg-7 col-md-12">
-                <img src=" <?php echo $imgs . "login.png" ?>" alt="Login image" class="img-fluid">
+                <img src=" <?php echo $imgs . "login.png" ?>" alt="Login image" class="img-fluid" width="500" height="500">
             </div>
         </div>
     </div>
+
+    <style> 
+    .input-group-text {
+        cursor: pointer;
+    }
+    </style>
 
 <?php include $tpl . "footer.php" ?>

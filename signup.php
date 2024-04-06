@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-lg-5 col-md-12 ">
                 <form method="POST" action="signup.php" class="form-signin p-5">
                     <h3 class="m-3">Create your account</h3>
-                    <p class="lead m-3">Team 1 </p>
+                    <p class="lead m-3" style = "font-family:candara;font-weight:bold;">Made by Team 1</p>
                     <div class="input-group mb-4">
                         <span class="input-group-text">@</span>
                         <input type="email" required id="email" class="form-control" placeholder="Email Address" name="email"
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    echo $_SESSION['signup_email'];
                                    unset($_SESSION['signup_email']);
                                }
-                               ?>">
+                               ?>"style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
                     <?php
                     if(isset($_SESSION['emailError']) && !empty($_SESSION['emailError'])){
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    echo $_SESSION['signup_username'];
                                    unset($_SESSION['signup_username']);
                                }
-                               ?>">
+                               ?>"style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
                     <?php
                         if(isset($_SESSION['userNameError'])&& !empty($_SESSION['userNameError'])){
@@ -149,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    echo $_SESSION['signup_firstName'];
                                    unset($_SESSION['signup_firstName']);
                                }
-                               ?>">
+                               ?>"style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
                     <?php
                     if(isset($_SESSION['firstNameError']) && !empty($_SESSION['firstNameError'])){
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    unset($_SESSION['signup_lastName']);
                                }
                                ?>"
-                        >
+                        style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
                     <?php
                     if(isset($_SESSION['lastNameError']) && !empty($_SESSION['lastNameError'])){
@@ -182,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    echo $_SESSION['signup_phone'];
                                    unset($_SESSION['signup_phone']);
                                }
-                               ?>">
+                               ?>"style = "font-family:candara;letter-spacing: 0.05em;">
 
                     </div>
                     <?php
@@ -199,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    echo $_SESSION['signup_password'];
                                    unset($_SESSION['signup_password']);
                                }
-                               ?>">
+                               ?>"style = "font-family:candara;">
                         <span class="input-group-text" onclick="togglePasswordVisibility()"><i class="bi bi-eye"
                                                                                                id="eyeIcon"></i></span>
                     </div>
@@ -217,7 +217,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 unset($_SESSION['signup_userType']);
                             }
                             ?>>
-                        <label class="form-check-label" for="buyerCheck">Buyer</label>
+                        <label class="form-check-label" for="buyerCheck"style = "font-family:candara;letter-spacing: 0.05em;">Buyer</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="userType" id="sellerCheck" value="seller"
@@ -227,7 +227,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 unset($_SESSION['signup_userType']);
                             }
                             ?>>
-                        <label class="form-check-label" for="sellerCheck">Seller</label>
+                        <label class="form-check-label" for="sellerCheck"style = "font-family:candara;letter-spacing: 0.05em;">Seller</label>
                     </div>
                     <div class="text-danger">
                         <?php
@@ -237,16 +237,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                         ?>
                     </div>
-                    <p class="mb-4 text-secondary">By clicking Sign-up, you agree to our
-                        <a href="#" class="link-primary">Terms of Use</a> and our
-                        <a href="#" class="link-primary">Privacy Policy</a>.</p>
+                    <p class="mb-4 text-secondary"style = "font-family:candara;letter-spacing: 0.05em;">By clicking Sign-up, you agree to our
+                        <a href="#" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Terms of Use</a> and our
+                        <a href="#" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Privacy Policy</a>.</p>
                     <div class="d-grid gap-2">
                         <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
-                               value="Sign-up">
+                               value="Sign-up"style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
-                    <span class="d-block text-left my-4 text-muted">— or sign-in —</span>
+                    <span class="d-block text-left my-4 text-muted"style = "font-family:candara;letter-spacing: 0.05em;">— or sign-in —</span>
                     <a href="signin.php" type="button"
-                       class="btn btn-block btn-success text-white rounded-pill btn-lg ps-5 pe-5">Sign-in</a>
+                       class="btn btn-block btn-success text-white rounded-pill btn-lg ps-5 pe-5"style = "font-family:candara;letter-spacing: 0.05em;">Sign-in</a>
                 </form>
             </div>
             <div class="col-lg-7 col-md-12 order-lg-first">

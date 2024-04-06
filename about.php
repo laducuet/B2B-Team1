@@ -24,7 +24,7 @@
 		<main>
 			<div class="about">
 				<h2 class="heading">About</h2>
-				<p>Description about us : ....</p>
+				<p style = "font-family:candara;letter-spacing: 0.05em;">Description about us : ....</p>
 			</div>
 		</main> <!-- Main Area -->
 	</div>
