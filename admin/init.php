@@ -4,8 +4,8 @@ include 'connect.php';
 //Routes 
 $tpl = "includes/temps/";
 $func = "includes/functions/";
-$css = "layout/css/";
-$js = "layout/js/";
+$css = "public/layout/css/";
+$js = "public/layout/js/";
 
 
 include $func . 'functions.php';
