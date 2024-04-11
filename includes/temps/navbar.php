@@ -4,7 +4,7 @@
   $func = "includes/functions/";
   require $func . 'controller.php';
   $unSeenFlag = false;
-  $images = "layout/images/";
+  $images = "public/layout/images/";
   session_start();
 
   $_SESSION['noOfNewNotification'] = 0;
@@ -40,30 +40,30 @@ header("Location: signin.php");
 ?>
 <?php if(isset($_SESSION["username"])): ?>
 	
-  <header>
-		<div class="container">
+  <header style = "background-color:#FFBE98;">
+		<div class="container" >
 			<div class="brand">
 				<div class="logo">
 					<a href="index.php">
 						<img src="img/icons/online_shopping.png">
 						<div class="logo-text">
-							<p class="big-logo">Electronic Commerce</p>
-							<p class="small-logo">Team 1</p>
+							<p class="big-logo" style = "font-family: candara;line-height: 1.15; padding: 20px;font-size:30px;">Electronic Commerce</p>
+							<!-- <p class="small-logo"></p> -->
 						</div>
 					</a>
 				</div> <!-- logo -->
         <div class="menu-bar">
 				<div class="search-bar">
 					<form>
-						<div class="form-group">
-							 <input type="text" class="form-control" name="keyword" placeholder="Search">
+						<div class="form-group" style = "margin: -20px;">
+							 <input type="text" class="form-control" name="keyword" placeholder="Type here to search..." style = "font-family: Arial, sans-serif;line-height: 1.15">
 							<img src="img/icons/search.png">
 						</div>
 					</form>
 				</div>
 			</div> <!-- menu -->
 				<div class="shop-icon">
-					<div class="dropdown">
+					<div class="dropdown" style = "margin-right:5px">
 						<img src="img/icons/account.png">
 						<div class="dropdown-menu">
 							<ul>
@@ -89,9 +89,9 @@ header("Location: signin.php");
 					</div>
           <div class="dropdown">
           <?php if($unSeenFlag): ?>
-            <img src="img/icons/heart_fill.png">
+            <img src="img/icons/heart_fill.png" style = "margin-left:5px;">
             <?php else: ?>
-              <img src="img/icons/heart.png">
+              <img src="img/icons/heart.png"style = "margin-left:5px;">
             <?php endif; ?>
 						<ul class="dropdown-menu dropdown-menu-notification" aria-labelledby="navbarDropdown11" style="right: 0;">
            

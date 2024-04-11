@@ -4,7 +4,7 @@
   $func = "includes/functions/";
   require $func . 'controller.php';
   $unSeenFlag = false;
-  $images = "layout/images/";
+  $images = "public/layout/images/";
   session_start();
   
   if(isset($_SESSION["typeOfUser"]) && $_SESSION["typeOfUser"]==="buyer"){

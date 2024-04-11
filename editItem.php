@@ -64,7 +64,7 @@ if (isset($_POST['DONE'])) {
     if (!(filter_var($_SESSION["price"], FILTER_VALIDATE_FLOAT) === 0 || filter_var($_SESSION["price"], FILTER_VALIDATE_FLOAT)) || floatval($_SESSION["price"]) < 0) {
         $_SESSION["pricerr"] = "* Invalid Number";
     }
-    
+
     //validate childcategory
     if ($_SESSION["childcategoryId"] == "Choose childcategories...") {
         $_SESSION["childcat_er"] = " * Please Choose childcategory";
@@ -72,7 +72,7 @@ if (isset($_POST['DONE'])) {
 
 
     if ($_SESSION['city_er'] == "" && $_SESSION['quantity_er'] == "" && $_SESSION['home_er'] == "" && $_SESSION['description_er'] == "" && $_SESSION['item_namerr'] == "" && $_SESSION["pricerr"] == ""
-     && $_SESSION["country_er"] == "" && $_SESSION["st_er"] == "") {
+        && $_SESSION["country_er"] == "" && $_SESSION["st_er"] == "") {
         updateTitle($db, $_SESSION['itemID'], $_SESSION['item_name']);
         updatePrice($db, $_SESSION['itemID'], $_SESSION['price']);
         updateDescription($db, $_SESSION['itemID'], $_SESSION['description_item']);
@@ -183,22 +183,20 @@ if (isset($_GET['deleteImage'])) {
 }
 
 
-
-
 ?>
 
-<?php if(isset($_GET['keyword'])): ?>
-					<?php if ($inputSearchError) :?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">Enter a valid value!</p>
-					<?php elseif(($noItemsSearch)): ?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items match this word
-						<?php echo " " .$_GET['keyword']; ?> </p>
-					<?php elseif($noItems): ?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items in this Category</p>
-					<?php else: ?>
-						<?php header("Location: searchItem.php?keyword=".$_GET['keyword']); ?>
-					<?php endif ?>
-          <?php endif ?>
+<?php if (isset($_GET['keyword'])): ?>
+    <?php if ($inputSearchError) : ?>
+        <p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">Enter a valid value!</p>
+    <?php elseif (($noItemsSearch)): ?>
+        <p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items match this word
+            <?php echo " " . $_GET['keyword']; ?> </p>
+    <?php elseif ($noItems): ?>
+        <p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items in this Category</p>
+    <?php else: ?>
+        <?php header("Location: searchItem.php?keyword=" . $_GET['keyword']); ?>
+    <?php endif ?>
+<?php endif ?>
 
     <div class="container-fluid ">
         <div class=" row justify-content-center  ">
@@ -231,7 +229,7 @@ if (isset($_GET['deleteImage'])) {
                                 echo $_SESSION["description_er"];
                                 unset($_SESSION["description_er"]);
                             } ?></p>
-                            <div class=" mb-4 input-group">
+                        <div class=" mb-4 input-group">
             <textarea placeholder="Information(For Game)" rows="2" class="form-control" id="exampleFormControlTextarea1"
                       name="information"><?php if (isset($_SESSION["information_item"])) {
                     echo $_SESSION["information_item"];

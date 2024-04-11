@@ -44,7 +44,7 @@
 		<meta name="author" content="Kamran Mubarik">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Title -->
- 		<title>Team 1</title>
+ 		<title>Team 1 presents</title>
  		<!-- Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="<?php echo $css?>bootstrap.min.css">

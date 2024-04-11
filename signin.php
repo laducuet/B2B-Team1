@@ -1,7 +1,7 @@
 <?php
 $noNavbar = '';
 $pageTitle = 'SignIn';
-$images = "layout/images/";
+$images = "public/layout/images/";
 include "init.php";
 session_start();
 if (isset($_POST['username']))
@@ -17,16 +17,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             unset($_SESSION["printUserName"]);
         $username = htmlentities($_POST['username']);
         $password = $_POST['password'];
-        $truePassword_id = getBuyerPassword_ID($username,$db);
-        if($truePassword_id!=false)
+        $truePassword_id = getBuyerPassword_ID($username, $db);
+        if ($truePassword_id != false)
             $typeOfUser = "buyer";
-        else{
-            $truePassword_id = getSellerPassword_ID($username,$db);
-            if($truePassword_id!=false)
+        else {
+            $truePassword_id = getSellerPassword_ID($username, $db);
+            if ($truePassword_id != false)
                 $typeOfUser = "seller";
-            else{
-                $truePassword_id = getAdminPassword_ID($username,$db);
-                if($truePassword_id!=false)
+            else {
+                $truePassword_id = getAdminPassword_ID($username, $db);
+                if ($truePassword_id != false)
                     $typeOfUser = "admin";
             }
         }
@@ -34,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION['username'] = htmlentities($_POST['username']);
             $_SESSION['id'] = $truePassword_id[0]->ID;
             $_SESSION['typeOfUser'] = $typeOfUser;
-            if($typeOfUser=="admin"){
+            if ($typeOfUser == "admin") {
                 header("Location: admin/index.php");
                 return;
             }
@@ -62,8 +62,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
     <div class="container-fluid text-center shadow p-2">
-        <a href="index.php" class="navbar-brand"  style="text-decoration: none;color: black">
-        <img src="img/icons/online_shopping.png" width="50" height="50" alt="logo" >
+        <a href="index.php" class="navbar-brand" style="text-decoration: none;color: black">
+            <img src="public/img/icons/online_shopping.png" width="50" height="50" alt="logo">
             Team 1
         </a>
     </div>
@@ -77,13 +77,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         <input type="text" required id="username" class="form-control" placeholder="Username"
                                name="username"
                                value="<?php
-                               if(isset($_SESSION["printUserName"])){
+                               if (isset($_SESSION["printUserName"])) {
                                    echo $_SESSION["printUserName"];
                                    unset($_SESSION["printUserName"]);
-                               }
-                               else{
+                               } else {
                                    echo "";
-                               }?>">
+                               } ?>">
                         <span class="input-group-text">@</span>
                     </div>
                     <div class="input-group mb-4">
@@ -94,8 +93,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
           </span>
                     </div>
                     <?php
-                    if(isset($_SESSION['error']) && !empty($_SESSION['error'])){
-                        echo' <div class="alert alert-danger" role="alert">'.$_SESSION["error"].'</div> ';
+                    if (isset($_SESSION['error']) && !empty($_SESSION['error'])) {
+                        echo ' <div class="alert alert-danger" role="alert">' . $_SESSION["error"] . '</div> ';
                         unset($_SESSION['error']);
                     }
                     ?>
