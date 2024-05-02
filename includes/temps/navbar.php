@@ -68,14 +68,14 @@ header("Location: signin.php");
 						<div class="dropdown-menu">
 							<ul>
                 <?php if($_SESSION["typeOfUser"]==="buyer"): ?>
-                  <li><a href="profileBuyer.php">PROFILE</a></li>
+                  <li><a href="profileBuyer.php" style = "font-family:candara;letter-spacing: 0.05em;">PROFILE</a></li>
                 <?php elseif($_SESSION["typeOfUser"]==="seller"): ?>
-                  <li><a href="profileSeller.php">PROFILE</a></li>
+                  <li><a href="profileSeller.php" style = "font-family:candara;letter-spacing: 0.05em;">PROFILE</a></li>
                 <?php endif; ?>
 								<?php if($_SESSION["typeOfUser"]==="buyer"): ?>
-                  <li><a href="<?php echo "cart.php?username=".$User[0]['userName']?>">CART</a></li>
+                  <li><a href="<?php echo "cart.php?username=".$User[0]['userName']?>" style = "font-family:candara;letter-spacing: 0.05em;">CART</a></li>
                 <?php elseif($_SESSION["typeOfUser"]==="seller"): ?>
-                  <li><a href="history.php">HISTORY</a></li>
+                  <li><a href="history.php" style = "font-family:candara;letter-spacing: 0.05em;">HISTORY</a></li>
                 <?php endif; ?>
 							</ul>
 						</div>

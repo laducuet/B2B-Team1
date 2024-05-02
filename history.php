@@ -10,12 +10,12 @@ $itemIDs = getItemIDsBySellerID($_SESSION['id'], $db);
 ?>
 <?php if(isset($_GET['keyword'])): ?>
 					<?php if ($inputSearchError) :?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">Enter a valid value!</p>
+					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%;font-family:candara;letter-spacing: 0.05em;">Enter a valid value!</p>
 					<?php elseif(($noItemsSearch)): ?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items match this word
+					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%;font-family:candara;letter-spacing: 0.05em;">No items match this word
 						<?php echo " " .$_GET['keyword']; ?> </p>
 					<?php elseif($noItems): ?>
-					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">No items in this Category</p>
+					<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%;font-family:candara;letter-spacing: 0.05em;">No items in this Category</p>
 					<?php else: ?>
 						<?php header("Location: searchItem.php?keyword=".$_GET['keyword']); ?>
 					<?php endif ?>
@@ -27,12 +27,12 @@ $itemIDs = getItemIDsBySellerID($_SESSION['id'], $db);
         <table class="table table-hover text-center">
             <thead class="bg-success text-light">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Order date</th>
-                <th scope="col">Buyer</th>
-                <th scope="col">Details</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">#</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">Price</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">Quantity</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">Order date</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">Buyer</th>
+                <th scope="col" style = "font-family:candara;letter-spacing: 0.05em;">Details</th>
             </tr>
             </thead>
             <tbody>

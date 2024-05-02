@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
     <div class="container-fluid text-center shadow p-2">
-        <a href="index.php" class="navbar-brand"  style="text-decoration: none;color: black">
+        <a href="index.php" class="navbar-brand"  style = "font-family:candara;letter-spacing: 0.05em;font-size:22px">
         <img src="img/icons/online_shopping.png" width="50" height="50" alt="logo" >
                 Team 1
             </a>
@@ -238,8 +238,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ?>
                     </div>
                     <p class="mb-4 text-secondary"style = "font-family:candara;letter-spacing: 0.05em;">By clicking Sign-up, you agree to our
-                        <a href="#" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Terms of Use</a> and our
-                        <a href="#" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Privacy Policy</a>.</p>
+                        <a href="/B2B-Team1/term.php" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Terms of Use</a> and our
+                        <a href="/B2B-Team1/term.php" class="link-primary"style = "font-family:candara;letter-spacing: 0.05em;">Privacy Policy</a>.</p>
                     <div class="d-grid gap-2">
                         <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
                                value="Sign-up"style = "font-family:candara;letter-spacing: 0.05em;">

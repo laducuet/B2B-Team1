@@ -68,7 +68,7 @@ for ($i = 0; $i < $iterI1; ++$i) {
             <div class="row row-of-card g-5 justify-content-center align-items-center">
                 <?php
                 if (count($items) == 0) {
-                    echo '<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%">không có sản phẩm nào!</p>          ';
+                    echo '<p class="alert-danger ms-auto me-auto pt-5 pb-5" style="width:50%;font-family:candara;letter-spacing: 0.05em;">Không có sản phẩm nào!</p>          ';
                 } else {
                     foreach ($items as $ite) {
                         if ($ite['isDeleted'] == 0) {
@@ -85,9 +85,9 @@ for ($i = 0; $i < $iterI1; ++$i) {
                                         }
                                         ?>" class="card-img-top" alt="Item">
                                         <div class="card-body">
-                                            <h5 class="card-title"><?php echo $ite['title'] ?></h5>
-                                            <h6 class="card-title"><?php echo $ite['childcategoryName'] ?></h6>
-                                            <p class="card-text"><?php echo $ite['description'] ?></p>
+                                            <h5 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo $ite['title'] ?></h5>
+                                            <h6 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo $ite['childcategoryName'] ?></h6>
+                                            <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo $ite['description'] ?></p>
                                             <div class="price">
                                                 <?php if ($ite['discount'] == 0) : ?>
                                                     <div class="new-price">
@@ -107,10 +107,10 @@ for ($i = 0; $i < $iterI1; ++$i) {
                                             </div>
                                             <div class="card-body">
                                                 <?php if ($ite['quantity'] == 0) : ?>
-                                                    <span class="badge p-3 rounded-pill bg-danger">Sold Out!</span>
+                                                    <span class="badge p-3 rounded-pill bg-danger" style = "font-family:candara;letter-spacing: 0.05em;font-size:13px;">Sold Out!</span>
                                                 <?php else : ?>
                                                     <a href="<?php echo "reviewitem.php?do=Manage&itemId=" . $ite['itemId'] . "&itemName=" . $ite['title'] ?>"
-                                                       class="btn btn-success">Review</a>
+                                                       class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Review</a>
                                                 <?php endif; ?>
                                             </div>
                                         </div>

@@ -55,29 +55,29 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
   <div
     class="row shadow rounded p-3 m-5 text-lg-start text-md-center text-sm-center border-start border-5 border-success">
     <div class="col-lg-3 m-auto">
-      <h1 class="card-title"><?= $sellerData["userName"] ?></h1>
+      <h1 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;font-weight:bold;"><?= $sellerData["userName"] ?></h1>
     </div>
     <div class="col-lg-7 m-auto">
       <div class="m-2">
-        <h4 class="d-inline-block">Email: </h4>
+        <h4 class="d-inline-block" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Email: </h4>
         <a href="mailto:<?= $sellerData["email"] ?>" class="mb-2 link-dark fa-1x ">
-          <h5 class="text-muted d-inline-block">
+          <h5 class="text-muted d-inline-block" style = "font-family:candara;letter-spacing: 0.05em;">
             <?= $sellerData["email"] ?>
           </h5>
         </a>
       </div>
       
       <div class="m-2">
-        <h4 class="d-inline-block">Balance: </h4>
+        <h4 class="d-inline-block" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Balance: </h4>
         <a href="mailto:<?= $sellerData["Amount"] ?>" class="mb-2 link-dark fa-1x ">
-          <h5 class="text-muted d-inline-block">
+          <h5 class="text-muted d-inline-block" style = "font-family:candara;letter-spacing: 0.05em;">
             <?= $sellerData["Amount"] ?>$
           </h5>
         </a>
       </div>
       <div class="m-2">
-        <h4 class="d-inline-block">Mobile: </h4>
-        <h5 class="mb-2 text-muted d-inline-block ">
+        <h4 class="d-inline-block" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Mobile: </h4>
+        <h5 class="mb-2 text-muted d-inline-block " style = "font-family:candara;letter-spacing: 0.05em;">
           <ul class="list-group list-group-flush profile_scroll" style="max-height: 120px;overflow: auto">
             <?php
                             foreach ($sellerMobiles as $mobile) {
@@ -89,8 +89,8 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
         </h5>
       </div>
       <div class="m-2">
-        <h4 class="d-inline-block">Join date: </h4>
-        <h5 class=" mb-2 text-muted d-inline-block"><?= $sellerData["joinDate"] ?></h5>
+        <h4 class="d-inline-block" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Join date: </h4>
+        <h5 class=" mb-2 text-muted d-inline-block" style = "font-family:candara;letter-spacing: 0.05em;"><?= $sellerData["joinDate"] ?></h5>
       </div>
     </div>
     <div class="col-lg-2 m-auto">
@@ -114,7 +114,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
             </div>
             <div class="text-end" style="width: fit-content">
               <h2 class="fw-normal pt-2 mb-1 text-center"> <?= $sellerData["likes"] + $sellerData["disLikes"] ?> </h2>
-              <p class="text-muted mb-1 text-center">Review</p>
+              <p class="text-muted mb-1 text-center" style = "font-family:candara;letter-spacing: 0.05em;">Review</p>
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
             </div>
             <div class="text-end" style="width: fit-content">
               <h2 class="fw-normal pt-2 mb-1 text-center"> <?= $sellerData["likes"] ?> </h2>
-              <p class="text-muted mb-1 text-center">Like</p>
+              <p class="text-muted mb-1 text-center" style = "font-family:candara;letter-spacing: 0.05em;">Like</p>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
             </div>
             <div class="text-end" style="width: fit-content">
               <h2 class="fw-normal pt-2 mb-1 text-center"> <?= $sellerData["disLikes"] ?> </h2>
-              <p class="text-muted mb-1 text-center">Dislike</p>
+              <p class="text-muted mb-1 text-center" style = "font-family:candara;letter-spacing: 0.05em;">Dislike</p>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
             </div>
             <div class="text-end" style="width: fit-content">
               <h2 class="fw-normal pt-2 mb-1 text-center"> <?= $sellerData["transactions"] ?> </h2>
-              <p class="text-muted mb-1 text-center">Transaction</p>
+              <p class="text-muted mb-1 text-center" style = "font-family:candara;letter-spacing: 0.05em;">Transaction</p>
             </div>
           </div>
         </div>
@@ -175,18 +175,18 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
   <!------------------------------------------------>
   <div class="row justify-content-around" id="forSale">
     <div class="btn-group" role="group" aria-label="Basic example">
-      <a href="#forSale" class="btn btn-success m-2 rounded-pill btn-lg">Items for sale</a>
-      <a href="#sold" class="btn btn-success m-2 rounded-pill btn-lg">Sold Items</a>
-      <a href="#deleted" class="btn btn-success m-2 rounded-pill btn-lg">Deleted Items</a>
+      <a href="#forSale" class="btn btn-success m-2 rounded-pill btn-lg" style = "font-family:candara;letter-spacing: 0.05em;">Items for sale</a>
+      <a href="#sold" class="btn btn-success m-2 rounded-pill btn-lg" style = "font-family:candara;letter-spacing: 0.05em;">Sold Items</a>
+      <a href="#deleted" class="btn btn-success m-2 rounded-pill btn-lg" style = "font-family:candara;letter-spacing: 0.05em;">Deleted Items</a>
     </div>
 
     <div class="row justify-content-between m-3">
       <div class="col-lg-8 jumbotron m-3">
         <div class="container">
-          <h1 class="display-4">For sale</h1>
+          <h1 class="display-4" style = "font-family:candara;letter-spacing: 0.05em;font-weight:bold;">For sale</h1>
           <hr class="my-4">
 
-          <p class="lead">List of all items that are offered for sale.</p>
+          <p class="lead" style = "font-family:candara;letter-spacing: 0.05em;">List of all items that are offered for sale.</p>
         </div>
       </div>
       <div class="col-lg-3 m-0" style="position: sticky; right: 0;">
@@ -196,7 +196,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
               <i class="bi bi-plus-circle fa-6x"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title text-center">Add Item</h5>
+              <h5 class="card-title text-center" style = "font-family:candara;letter-spacing: 0.05em;">Add Item</h5>
             </div>
           </div>
         </a>
@@ -259,9 +259,9 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
   <div class="row justify-content-around" id="sold">
     <div class="jumbotron jumbotron-fluid m-3">
       <div class="container">
-        <h1 class="display-4">Sold Out</h1>
+        <h1 class="display-4" style = "font-family:candara;letter-spacing: 0.05em;font-weight:bold;">Sold Out</h1>
         <hr class="my-4">
-        <p class="lead">List of all Sold items.</p>
+        <p class="lead" style = "font-family:candara;letter-spacing: 0.05em;">List of all Sold items.</p>
       </div>
     </div>
     <div class="col-sm-12 ">
@@ -321,9 +321,9 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
     <div class="col-sm-12">
       <div class="jumbotron jumbotron-fluid m-3">
         <div class="container">
-          <h1 class="display-4">Deleted</h1>
+          <h1 class="display-4" style = "font-family:candara;letter-spacing: 0.05em;font-weight:bold;">Deleted</h1>
           <hr class="my-4">
-          <p class="lead">List of all deleted items.</p>
+          <p class="lead" style = "font-family:candara;letter-spacing: 0.05em;">List of all deleted items.</p>
         </div>
       </div>
       <section class="row flex-row flex-nowrap p-3 overflow-auto profile_scroll rounded position-static"

@@ -203,11 +203,11 @@ if (isset($_GET['deleteImage'])) {
     <div class="container-fluid ">
         <div class=" row justify-content-center  ">
             <div class=" col-md-10 row  justify-content-center m-5 text-center input-group-lg shadow">
-                <div class="display h1 mt-4 mb-4">Edit Item</div>
+                <div class="display h1 mt-4 mb-4" style = "font-family:candara;letter-spacing: 0.05em;">EDIT ITEM</div>
                 <div class=" col-lg-5 col-md-12 col-sm-6 justify-content-center col-fluid">
                     <form action="editItem.php" method="POST" id="contactFrom" enctype="multipart/form-data">
                         <div class="mb-4 input-group ">
-                            <input type="name" class="form-control" placeholder="Item Name" name='name' autofocus
+                            <input type="name" class="form-control" placeholder="Item Name" style = "font-family:candara;letter-spacing: 0.05em;"name='name' autofocus 
                                    value="<?php if (isset($_SESSION["item_name"])) {
                                        echo $_SESSION["item_name"];
                                        unset($_SESSION["item_name"]);
@@ -219,7 +219,7 @@ if (isset($_GET['deleteImage'])) {
                                 unset($_SESSION["item_namerr"]);
                             } ?></p>
                         <div class=" mb-4 input-group">
-            <textarea placeholder="Description" class="form-control" rows="2"
+            <textarea style = "font-family:candara;letter-spacing: 0.05em;" placeholder="Description" class="form-control" rows="2"
                       name="description"><?php if (isset($_SESSION['description_item'])) {
                     echo $_SESSION['description_item'];
                     unset($_SESSION['description_item']);
@@ -232,14 +232,14 @@ if (isset($_GET['deleteImage'])) {
                                 unset($_SESSION["description_er"]);
                             } ?></p>
                             <div class=" mb-4 input-group">
-            <textarea placeholder="Information(For Game)" rows="2" class="form-control" id="exampleFormControlTextarea1"
+            <textarea style = "font-family:candara;letter-spacing: 0.05em;" placeholder="Information(For Game)" rows="2" class="form-control" id="exampleFormControlTextarea1"
                       name="information"><?php if (isset($_SESSION["information_item"])) {
                     echo $_SESSION["information_item"];
                     unset($_SESSION["information_item"]);
                 }; ?></textarea>
                         </div>
                         <div class="input-group  mb-4">
-                            <select value="<?php if (isset($_SESSION["childcategoryId"])) {
+                            <select style = "font-family:candara;letter-spacing: 0.05em;" value="<?php if (isset($_SESSION["childcategoryId"])) {
                                 echo $_SESSION["childcategoryId"];
                                 unset($_SESSION["childcategoryId'"]);
                             } ?>" class="form-select " id="inputGroupSelect02" name="childcategory">
@@ -248,14 +248,14 @@ if (isset($_GET['deleteImage'])) {
                                 <?php $row = getchildcategories($db);
                                 foreach ($row as $cat):
                                     if ($cat['childcategoryId'] == $_SESSION['childcategoryId']) {
-                                        echo '<option selected value="' . $_SESSION['childcategoryId'] . '">' . $_SESSION['childcategoryName'] . '</option>';
+                                        echo '<option selected style = "font-family:candara;letter-spacing: 0.05em;" value="' . $_SESSION['childcategoryId'] . '">' . $_SESSION['childcategoryName'] . '</option>';
                                     } else {
-                                        echo '<option value="' . $cat['childcategoryId'] . '">' . $cat['childcategoryName'] . '</option>';
+                                        echo '<option style = "font-family:candara;letter-spacing: 0.05em;" value="' . $cat['childcategoryId'] . '">' . $cat['childcategoryName'] . '</option>';
                                     } ?>
                                 <?php endforeach ?>
                             </select>
                             <label class="input-group-text bg-success text-light"
-                                   for="inputGroupSelect02">Options</label>
+                                   for="inputGroupSelect02"style = "font-family:candara;letter-spacing: 0.05em;" >Options</label>
                         </div>
                         <p class="diplay text-danger "><?php
                             if (isset($_SESSION["childcat_er"])) {
@@ -264,14 +264,14 @@ if (isset($_GET['deleteImage'])) {
                             } ?></p>
                         <div class="row g-2 mb-4">
                             <div class="col-sm-6">
-                                <input min=1 type="number" name="homenumber" class="form-control"
+                                <input style = "font-family:candara;letter-spacing: 0.05em;" min=1 type="number" name="homenumber" class="form-control"
                                        placeholder="Home Number" value="<?php if (isset($_SESSION["homeNum"])) {
                                     echo $_SESSION["homeNum"];
                                     unset($_SESSION["homeNum"]);
                                 } ?>">
                             </div>
                             <div class="col-sm-6">
-                                <input name="street" type="text" class="form-control" placeholder="Street"
+                                <input style = "font-family:candara;letter-spacing: 0.05em;" name="street" type="text" class="form-control" placeholder="Street"
                                        aria-label="streett" value="<?php if (isset($_SESSION["st"])) {
                                     echo $_SESSION["st"];
                                     unset($_SESSION["st"]);
@@ -290,14 +290,14 @@ if (isset($_GET['deleteImage'])) {
                             } ?></p>
                         <div class="row g-2 mb-4">
                             <div class="col-sm-6">
-                                <input type="text" name="city" class="form-control" placeholder="City" aria-label="City"
+                                <input type="text" style = "font-family:candara;letter-spacing: 0.05em;" name="city" class="form-control" placeholder="City" aria-label="City"
                                        value="<?php if (isset($_SESSION["city"])) {
                                            echo $_SESSION["city"];
                                            unset($_SESSION["city"]);
                                        } ?>">
                             </div>
                             <div class="col-sm-6">
-                                <input name="country" type="text" class="form-control" placeholder="Country"
+                                <input style = "font-family:candara;letter-spacing: 0.05em;" name="country" type="text" class="form-control" placeholder="Country"
                                        aria-label="country" value="<?php if (isset($_SESSION["country"])) {
                                     echo $_SESSION["country"];
                                     unset($_SESSION["country"]);
@@ -314,7 +314,7 @@ if (isset($_GET['deleteImage'])) {
                                 unset($_SESSION["city_er"]);
                             } ?></p>
                         <div class=" input-group mb-4">
-                            <input value="<?php if (isset($_SESSION["price"])) {
+                            <input style = "font-family:candara;letter-spacing: 0.05em;" value="<?php if (isset($_SESSION["price"])) {
                                 echo $_SESSION["price"];
                                 unset($_SESSION["price"]);
                             } ?>" placeholder=" Price" name="priceOfItem" type="text"
@@ -327,7 +327,7 @@ if (isset($_GET['deleteImage'])) {
                                 unset($_SESSION["pricerr"]);
                             } ?></p>
                         <div class=" input-group mb-4">
-                            <input min=0 placeholder="Discount" max=100 name="discountOfItem" type="number"
+                            <input style = "font-family:candara;letter-spacing: 0.05em;" min=0 placeholder="Discount" max=100 name="discountOfItem" type="number"
                                    class="form-control" value="<?php if (isset($_SESSION["discount_item"])) {
                                 echo $_SESSION["discount_item"];
                                 unset($_SESSION["discount_item"]);
@@ -336,11 +336,11 @@ if (isset($_GET['deleteImage'])) {
                             <!-- <span class="input-group-text bg-success text-light">%</span> -->
                         </div>
                         <div class="input-group  mb-4 ">
-                            <input name="files[]" type="file" class="form-control " id="inputGroupFile04" multiple
+                            <input style = "font-family:candara;letter-spacing: 0.05em;" name="files[]" type="file" class="form-control " id="inputGroupFile04" multiple
                                    aria-describedby="inputGroupFileAddon04 " aria-label="Upload"/>
                         </div>
                         <div class="input-group mb-4">
-                            <input class="form-control" type="number" placeholder="Quantity" name="quantity" min=0
+                            <input style = "font-family:candara;letter-spacing: 0.05em;" class="form-control" type="number" placeholder="Quantity" name="quantity" min=0
                                    value="<?php if (isset($_SESSION["quantity_item"])) {
                                        echo $_SESSION["quantity_item"];
                                        unset($_SESSION["quantity_item"]);
@@ -351,7 +351,7 @@ if (isset($_GET['deleteImage'])) {
                                 echo $_SESSION['quantity_er'];
                                 unset($_SESSION['quantity_er']);
                             } ?></p>
-                        <button class="btn  btn-success text-align-light mt-2 mb-4" type="submit" name="DONE">Save
+                        <button class="btn  btn-success text-align-light mt-2 mb-4" style = "font-family:candara;letter-spacing: 0.05em;" type="submit" name="DONE">Save
                             item
                         </button>
                     </form>

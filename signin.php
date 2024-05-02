@@ -101,10 +101,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                         unset($_SESSION['error']);
                     }
                     ?>
-                    <p class="mb-4 text-secondary" style = "font-family:candara;">By clicking Sign In, you agree to our <a href="#"
+                    <p class="mb-4 text-secondary" style = "font-family:candara;">By clicking Sign In, you agree to our <a href="/B2B-Team1/term.php"
                                                                                             class="link-primary" style = "font-family:candara;">Terms
                             of
-                            Use</a> and our <a href="#" class="link-primary" style = "font-family:candara;">Privacy Policy</a>.</p>
+                            Use</a> and our <a href="/B2B-Team1/term.php" class="link-primary" style = "font-family:candara;">Privacy Policy</a>.</p>
                     <div class="d-grid gap-2">
                         <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
                                value="Sign-in" style = "font-family:candara;">

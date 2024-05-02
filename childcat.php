@@ -33,15 +33,15 @@
                 <?php foreach($childcategories as $childcat): ?>
                   <div class="col-lg-4 col-sm-4">
                     <div class="box_main">
-                      <h4 class="shirt_text" ><?php echo $childcat['childcategoryName'] ?></h4>
-                      <p class="price_text">
+                      <h4 class="shirt_text" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo $childcat['childcategoryName'] ?></h4>
+                      <p class="price_text" style = "font-family:candara;letter-spacing: 0.05em;">
                         Số lượng: <span style="color: #262626">
                         <?php 
                           echo $childcat['totalItems'];
                         ?>
                       </span>
                       </p>
-                      <p class="price_text">
+                      <p class="price_text" style = "font-family:candara;letter-spacing: 0.05em;">
                         Đã bán: <span style="color: #262626">
                         <?php 
                           $count = 0;
@@ -64,7 +64,7 @@
                       </div>
                       <div class="see_all">
                         <ul>
-                          <li><a href="<?php echo "acc.php?childcat=".urlencode($childcat['childcategoryId']); ?>">Xem tất cả</a></li>
+                          <li><a href="<?php echo "acc.php?childcat=".urlencode($childcat['childcategoryId']); ?>" style = "font-family:candara;letter-spacing: 0.05em;">Xem tất cả</a></li>
                         </ul>
                       </div>
                     </div>

@@ -62,11 +62,11 @@ if (!isset($_SESSION['password_checked'])) {
     <div class="col-md-10 row justify-content-center m-5 text-center shadow">
         <div class="col-lg-5 col-md-12">
             <form method="POST" action="EditProfile.php" class="form-signin p-5">
-                <h3 class="m-3">Enter your password</h3>
-                <p class="lead m-3"> Team 1 </p>
+                <h3 class="m-3" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Enter your password</h3>
+                <p class="lead m-3" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;"> Team 1 </p>
                 <div class="input-group mb-4">
                     <input type="password" required id="password" class="form-control" placeholder="Password"
-                           name="password">
+                           name="password" style = "font-family:candara;letter-spacing: 0.05em;">
                     <span class="input-group-text" onclick="togglePasswordVisibility()">
             <i class="bi bi-eye" id="eyeIcon"></i>
           </span>
@@ -79,7 +79,7 @@ if (!isset($_SESSION['password_checked'])) {
                 ?>
                 <div class="d-grid gap-2">
                     <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
-                           value="Submit">
+                           value="Submit" style = "font-family:candara;letter-spacing: 0.05em;">
                 </div>
             </form>
         </div>
@@ -225,12 +225,12 @@ if (!isset($_SESSION['password_checked'])) {
         <div class="col-md-10 row justify-content-center m-5 text-center shadow">
             <div class="col-lg-5 col-md-12 ">
                 <form method="POST" action="EditProfile.php" class="form-signin p-5">
-                    <h3 class="m-3">Edit your data</h3>
-                    <p class="lead m-3">Team 1 </p>
+                    <h3 class="m-3" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Edit your data</h3>
+                    <p class="lead m-3" style = "font-family:candara;letter-spacing: 0.05em; font-weight:bold;">Team 1 </p>
                     <div class="input-group mb-4">
                         <span class="input-group-text">@</span>
                         <input type="email" required id="email" class="form-control" placeholder="Email Address"
-                               name="email"
+                               name="email" style = "font-family:candara;letter-spacing: 0.05em;"
                                value="<?php
                                if (isset($_SESSION['Edit_email'])) {
                                    echo $_SESSION['Edit_email'];
@@ -246,7 +246,7 @@ if (!isset($_SESSION['password_checked'])) {
                     <div class="input-group mb-4">
                         <span class="input-group-text"><i class="bi bi-person"></i></span>
                         <input type="text" required id="username" class="form-control" placeholder="Username"
-                               name="username"
+                               name="username" style = "font-family:candara;letter-spacing: 0.05em;"
                                value="<?php
                                if (isset($_SESSION['Edit_username'])) {
                                    echo $_SESSION['Edit_username'];
@@ -262,7 +262,7 @@ if (!isset($_SESSION['password_checked'])) {
                     <div class="input-group mb-4">
                         <span class="input-group-text"><i class="bi bi-file-person"></i></span>
                         <input type="text" required id="firstName" class="form-control" placeholder="First Name"
-                               name="firstName"
+                               name="firstName" style = "font-family:candara;letter-spacing: 0.05em;"
                                value="<?php
                                if (isset($_SESSION['Edit_firstName'])) {
                                    echo $_SESSION['Edit_firstName'];
@@ -278,7 +278,7 @@ if (!isset($_SESSION['password_checked'])) {
                     <div class="input-group mb-4">
                         <span class="input-group-text"><i class="bi bi-file-person"></i></span>
                         <input type="text" required id="lastName" class="form-control" placeholder="Last Name"
-                               name="lastName"
+                               name="lastName" style = "font-family:candara;letter-spacing: 0.05em;"
                                value="<?php
                                if (isset($_SESSION['Edit_lastName'])) {
                                    echo $_SESSION['Edit_lastName'];
@@ -295,7 +295,7 @@ if (!isset($_SESSION['password_checked'])) {
                     <div class="input-group mb-4">
                         <span class="input-group-text"><i class="bi bi-lock"></i></span>
                         <input type="password" required id="password" class="form-control" placeholder="Password"
-                               name="password"
+                               name="password" style = "font-family:candara;letter-spacing: 0.05em;"
                                value="<?php
                                if (isset($_SESSION['Edit_password'])) {
                                    echo $_SESSION['Edit_password'];
@@ -320,7 +320,7 @@ if (!isset($_SESSION['password_checked'])) {
                     </div>
                     <div class="d-grid gap-2">
                         <input type="submit" class="btn btn-block btn-success text-white rounded-pill btn-lg"
-                               value="Submit">
+                               value="Submit" style = "font-family:candara;letter-spacing: 0.05em;">
                     </div>
                 </form>
                 <div>
@@ -340,7 +340,7 @@ if (!isset($_SESSION['password_checked'])) {
                                 <div class="input-group mb-4">
                                     <span class="input-group-text"><i class="bi bi-phone"></i></span>
                                     <input type="tel" required id="typePhone" class="form-control"
-                                           placeholder="Phone Number" name="phone">
+                                           placeholder="Phone Number" name="phone" style = "font-family:candara;letter-spacing: 0.05em;">
                                     <input type="submit" class="btn btn-block btn-success text-white rounded btn p-3"
                                            value="Add" name="mobileForm">
                                     <br>

@@ -148,12 +148,12 @@ if (isset($_POST['done'])) {
     <div class="container-fluid ">
         <div class=" row justify-content-center  ">
             <div class=" col-md-10 row  justify-content-center m-5 text-center input-group-lg shadow">
-                <div class="display h1 mt-4 mb-4">Add Item</div>
+                <div class="display h1 mt-4 mb-4" style = "font-family:candara;letter-spacing: 0.05em;">Add Item</div>
                 <div class=" col-lg-5 col-md-12 col-sm-6">
                     <form action="add_item.php" method="POST" id="contactFrom" enctype="multipart/form-data"
                           style="height: fit-content;">
                         <div class="mb-4 input-group ">
-                            <input type="name" class="form-control" placeholder="Item Name" name="name" required
+                            <input type="name" class="form-control" placeholder="Item Name" style = "font-family:candara;letter-spacing: 0.05em;"name="name" required
                                    autofocus value="<?php
                             if (isset($_SESSION["item_name"])) {
                                 echo $_SESSION["item_name"];
@@ -167,7 +167,7 @@ if (isset($_POST['done'])) {
                                 unset($_SESSION["item_namerr"]);
                             } ?></p>
                         <div class=" mb-4 input-group">
-            <textarea placeholder="Description" rows="2" class="form-control" id="exampleFormControlTextarea1"
+            <textarea placeholder="Description" rows="2"style = "font-family:candara;letter-spacing: 0.05em;" class="form-control" id="exampleFormControlTextarea1"
                       name="description"><?php if (isset($_SESSION["description_item"])) {
                     echo $_SESSION["description_item"];
                     unset($_SESSION["description_item"]);
@@ -179,7 +179,7 @@ if (isset($_POST['done'])) {
                                 unset($_SESSION["description_er"]);
                             } ?></p>
                             <div class=" mb-4 input-group">
-            <textarea placeholder="Information(For Game)" rows="2" class="form-control" id="exampleFormControlTextarea1"
+            <textarea placeholder="Information(For Game)" style = "font-family:candara;letter-spacing: 0.05em;"rows="2" class="form-control" id="exampleFormControlTextarea1"
                       name="information"><?php if (isset($_SESSION["information_item"])) {
                     echo $_SESSION["information_item"];
                     unset($_SESSION["information_item"]);
@@ -190,15 +190,15 @@ if (isset($_POST['done'])) {
                             <select required value="<?php if (isset($_SESSION["childcategoryId"])) {
                                 echo $_SESSION["childcategoryId"];
                                 unset($_SESSION["childcategoryId'"]);
-                            } ?>" class="form-select " id="inputGroupSelect02" name="childcategory" required>
+                            } ?>" class="form-select " id="inputGroupSelect02" name="childcategory" required style = "font-family:candara;letter-spacing: 0.05em;">
                                 <option selected> Choose childcategories...</option>
                                 <?php $row = getChildCategories($db);
                                 foreach ($row as $childcat):
-                                    echo '<option value="' . $childcat['childcategoryId'] . '">' . $childcat['childcategoryName'] . '</option>'; ?>
+                                    echo '<option style = "font-family:candara;letter-spacing: 0.05em;" value="' . $childcat['childcategoryId'] . '">' . $childcat['childcategoryName'] . '</option>'; ?>
                                 <?php endforeach ?>
                             </select>
                             <label class="input-group-text bg-success text-light"
-                                   for="inputGroupSelect02">Options</label>
+                                   for="inputGroupSelect02" style = "font-family:candara;letter-spacing: 0.05em;">Options</label>
                         </div>
                         <p class="diplay text-danger "><?php
                             if (isset($_SESSION["cat_er"])) {
@@ -207,7 +207,7 @@ if (isset($_POST['done'])) {
                             } ?></p>
                         <div class="row g-2 mb-4">
                             <div class="col-sm-6">
-                                <input required min=0 type="number" name="homenumber" class="form-control"
+                                <input required min=0 style = "font-family:candara;letter-spacing: 0.05em;"type="number" name="homenumber" class="form-control"
                                        placeholder="Home Number"
                                        value="<?php if (isset($_SESSION["homeNum"])) {
                                            echo $_SESSION["homeNum"];
@@ -215,7 +215,7 @@ if (isset($_POST['done'])) {
                                        } ?>">
                             </div>
                             <div class="col-sm-6">
-                                <input required name="street" type="text" class="form-control" placeholder="Street"
+                                <input required name="street" style = "font-family:candara;letter-spacing: 0.05em;"type="text" class="form-control" placeholder="Street"
                                        aria-label="streett"
                                        value="<?php if (isset($_SESSION["st"])) {
                                            echo $_SESSION["st"];
@@ -237,14 +237,14 @@ if (isset($_POST['done'])) {
                             } ?></p>
                         <div class="row g-2 mb-4">
                             <div class="col-sm-6">
-                                <input required type="text" name="city" class="form-control" placeholder="City"
+                                <input required type="text" style = "font-family:candara;letter-spacing: 0.05em;"name="city" class="form-control" placeholder="City"
                                        aria-label="City" value="<?php if (isset($_SESSION["city"])) {
                                     echo $_SESSION["city"];
                                     unset($_SESSION["city"]);
                                 } ?>">
                             </div>
                             <div class="col-sm-6">
-                                <input required name="country" type="text" class="form-control" placeholder="Country"
+                                <input required name="country"style = "font-family:candara;letter-spacing: 0.05em;" type="text" class="form-control" placeholder="Country"
                                        aria-label="country"
                                        value="<?php if (isset($_SESSION["country"])) {
                                            echo $_SESSION["country"];
@@ -265,7 +265,7 @@ if (isset($_POST['done'])) {
                             <input value="<?php if (isset($_SESSION["price"])) {
                                 echo $_SESSION["price"];
                                 unset($_SESSION["price"]);
-                            } ?>" placeholder=" Price" name="priceOfItem" type="text"
+                            } ?>" placeholder=" Price" style = "font-family:candara;letter-spacing: 0.05em;"name="priceOfItem" type="text"
                                    required class="form-control  "
                                    aria-label="Dollar amount (with dot and two decimal places)">
                             <span class="input-group-text bg-success text-light">$</span>
@@ -275,7 +275,7 @@ if (isset($_POST['done'])) {
                                 unset($_SESSION["pricerr"]);
                             } ?></p>
                         <div class=" input-group mb-4">
-                            <input min=0 placeholder="Discount" max=100 name="discountOfItem" type="number"
+                            <input min=0 placeholder="Discount" style = "font-family:candara;letter-spacing: 0.05em;"max=100 name="discountOfItem" type="number"
                                    class="form-control" value="<?php if (isset($_SESSION["discount_item"])) {
                                 echo $_SESSION["discount_item"];
                                 unset($_SESSION["discount_item"]);
@@ -283,11 +283,11 @@ if (isset($_POST['done'])) {
                             <span class=" input-group-text  bg-success text-light">$</span>
                         </div>
                         <div class="input-group  mb-4 ">
-                            <input name="files[]" type="file" class="form-control " id="inputGroupFile04" multiple
+                            <input name="files[]" type="file" style = "font-family:candara;letter-spacing: 0.05em;"class="form-control " id="inputGroupFile04" multiple
                                    aria-describedby="inputGroupFileAddon04 " aria-label="Upload"/>
                         </div>
                         <div class="input-group mb-4" id="input_div">
-                            <input required class="form-control " type="number" placeholder="Quantity" name="quantity"
+                            <input required class="form-control " style = "font-family:candara;letter-spacing: 0.05em;"type="number" placeholder="Quantity" name="quantity"
                                    size="25" min=0
                                    id=" counting" value="<?php if (isset($_SESSION["quantity_item"])) {
                                 echo $_SESSION["quantity_item"];
@@ -299,7 +299,7 @@ if (isset($_POST['done'])) {
                                 echo $_SESSION['quantity_er'];
                                 unset($_SESSION['quantity_er']);
                             } ?></p>
-                        <button class="btn  btn-success text-align-light mt-2 mb-4" type="submit" name="done">Add
+                        <button class="btn  btn-success text-align-light mt-2 mb-4" style = "font-family:candara;letter-spacing: 0.05em;"type="submit" name="done">Add
                             item
                         </button>
                     </form>
