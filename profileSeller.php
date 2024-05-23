@@ -216,13 +216,13 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
                     echo '
                     <div class="col-lg-3 m-0 text-center">
                         <div class="card m-md-auto shadow" style="width: 18rem;">
-                             <a href="orders.php?itemid='.$forSaleItem->itemId.'" class="btn btn-danger rounded-pill position-absolute"
+                             <a style = "font-family:candara;letter-spacing: 0.05em;"href="orders.php?itemid='.$forSaleItem->itemId.'" class="btn btn-danger rounded-pill position-absolute"
                                style="width: fit-content; top: 0;right: 0">
                                 <span class="badge">'.$countOrders.'</span></a>
                                 '; ?>
 
         <a href="reviewItem.php?do=Manage&itemId=<?= $forSaleItem->itemId?>&itemName=<?=$forSaleItem->title?>"
-          style="text-decoration: none;color: black">
+          style = "font-family:candara;letter-spacing: 0.05em;">
           <?php
                         if($imageName){
                             echo'<img src="'.$imagesUploades. $imageName[0]->image .' " class="card-img-top" alt="Item">';
@@ -232,15 +232,15 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
                         ?>
           <?php echo '       
                     <div class="card-body">
-                                <h5 class="card-title">' . $forSaleItem->title . '</h5>
+                                <h5 class="card-title" >' . $forSaleItem->title . '</h5>
                                 
                                 <h6 class="card-title">' . $childcategory->childcategoryName . '</h6>
-                                <p class="card-text">' . $forSaleItem->description . '</p>
+                                <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;">' . $forSaleItem->description . '</p>
                                 <h4 class="card-title">' . $forSaleItem->price . '$</h4>
                                 <h6 class="card-title">' . $forSaleItem->addDate . '</h6>
                                 <div class="card-body">
-                                    <a href="editItem.php?id=' . $forSaleItem->itemId . '" class="btn btn-success">Edit</a>
-                                    <a href="profileSeller.php?delete_id=' . $forSaleItem->itemId . '" class="btn btn-danger">Delete</a>
+                                    <a href="editItem.php?id=' . $forSaleItem->itemId . '" class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Edit</a>
+                                    <a href="profileSeller.php?delete_id=' . $forSaleItem->itemId . '" class="btn btn-danger" style = "font-family:candara;letter-spacing: 0.05em;">Delete</a>
                                 </div>
                             </div>
                             </a>
@@ -278,7 +278,7 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
                     <div class="col-lg-3 m-0 text-center">
                         <div class="card m-md-auto shadow" style="width: 18rem;">
                         <a href="orders.php?itemid='.$soldItem->itemId.'" style="z-index: 12" class="btn btn-danger rounded-pill position-absolute"
-                               style="width: fit-content; top: 0;right: 0">
+                        style = "font-family:candara;letter-spacing: 0.05em;">
                                 <span class="badge">'.$countOrders.'</span></a>
                                 '; ?>
         <a href="reviewItem.php?do=Manage&itemId=<?= $soldItem->itemId?>&itemName=<?=$soldItem->title?>"
@@ -295,12 +295,12 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
                     <div class="card-body">
                                 <h5 class="card-title">' . $soldItem->title . '</h5>
                                 <h6 class="card-title">' . $childcategory->childcategoryName . '</h6>
-                                <p class="card-text">' . $soldItem->description . '</p>
+                                <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;">' . $soldItem->description . '</p>
                                 <h4 class="card-title">' . $soldItem->price . '$</h4>
                                 <h6 class="card-title">' . $soldItem->addDate . '</h6>
                                 <div class="card-body">
-                                    <a href="editItem.php?id=' . $soldItem->itemId . '" class="btn btn-success">Edit</a>
-                                    <a href="profileSeller.php?delete_id=' . $soldItem->itemId . '" class="btn btn-danger">Delete</a>
+                                    <a href="editItem.php?id=' . $soldItem->itemId . '" class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Edit</a>
+                                    <a href="profileSeller.php?delete_id=' . $soldItem->itemId . '" class="btn btn-danger" style = "font-family:candara;letter-spacing: 0.05em;">Delete</a>
                                 </div>
                             </div>
                             </a>
@@ -352,12 +352,12 @@ $deletedItems = getSellerDeletedItems($_SESSION['id'], $db);
           <?php echo '       
                     <div class="card-body">
                                 <h5 class="card-title">' . $deletedItem->title . '</h5>
-                                <p class="card-text">' . $deletedItem->description . '</p>
+                                <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;">' . $deletedItem->description . '</p>
                                 <h4 class="card-title">' . $deletedItem->price . '$</h4>
                                 <h6 class="card-title">' . $deletedItem->addDate . '</h6>
                                 <div class="card-body">
-                                    <a href="profileSeller.php?retrieve_id=' . $deletedItem->itemId . '" class="btn btn-success">Retrieve</a>
-                                    <a href="profileSeller.php?permanentlyDelete_id=' . $deletedItem->itemId . '"  id="stopRedirect" class="btn btn-danger" onclick="return permanentlyDeleteItem()">Delete</a>
+                                    <a href="profileSeller.php?retrieve_id=' . $deletedItem->itemId . '" class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Retrieve</a>
+                                    <a href="profileSeller.php?permanentlyDelete_id=' . $deletedItem->itemId . '"  id="stopRedirect" class="btn btn-danger" onclick="return permanentlyDeleteItem()" style = "font-family:candara;letter-spacing: 0.05em;">Delete</a>
                                 </div>
                             </div>
                     </a>
@@ -597,7 +597,7 @@ $deletedItems = getSellerDeletedItems($_GET['id'], $db);
                     <div class="card-body">
                                 <h5 class="card-title">' . $soldItem->title . '</h5>
                                 <h6 class="card-title">' . $childcategory->childcategoryName . '</h6>
-                                <p class="card-text">' . $soldItem->description . '</p>
+                                <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;">' . $soldItem->description . '</p>
                                 <h4 class="card-title">' . $soldItem->price . '$</h4>
                                 <h6 class="card-title">' . $soldItem->addDate . '</h6>
                                 <div class="card-body">

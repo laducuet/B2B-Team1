@@ -32,7 +32,7 @@
               <div class="row">
                 <?php foreach($childcategories as $childcat): ?>
                   <div class="col-lg-4 col-sm-4">
-                    <div class="box_main">
+                    <div class="box_main" style = "box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px; border-radius: 10px">
                       <h4 class="shirt_text" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo $childcat['childcategoryName'] ?></h4>
                       <p class="price_text" style = "font-family:candara;letter-spacing: 0.05em;">
                         Số lượng: <span style="color: #262626">
@@ -64,7 +64,7 @@
                       </div>
                       <div class="see_all">
                         <ul>
-                          <li><a href="<?php echo "acc.php?childcat=".urlencode($childcat['childcategoryId']); ?>" style = "font-family:candara;letter-spacing: 0.05em;">Xem tất cả</a></li>
+                          <li><a href="<?php echo "acc.php?childcat=".urlencode($childcat['childcategoryId']); ?>" style = "font-family:candara;letter-spacing: 0.05em; font-weight: bold">Xem tất cả</a></li>
                         </ul>
                       </div>
                     </div>

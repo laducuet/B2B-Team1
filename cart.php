@@ -50,21 +50,21 @@ if(isset($_GET['Ordersuccess'])&&$_GET['Ordersuccess']==='false'){
 <div class="container-lg text-center shadow p-5 mt-4 mb-4 border-3">
   <div class="text-center">
     <?php if(isset($_SESSION['Ordersuccess'])&&$_SESSION['Ordersuccess']=='true'): ?>
-    <div class="alert alert-success m-auto mb-5" style="width: 50%;" role="alert">Order Done Successfully</div>
+    <div class="alert alert-success m-auto mb-5" style="width: 50%;font-family:candara;letter-spacing: 0.05em;" role="alert">Order Done Successfully!</div>
     <?php unset($_SESSION['Ordersuccess']); ?>
     <?php elseif(isset($_SESSION['Ordersuccess'])&&$_SESSION['Ordersuccess']==='false'): ?>
     <?php if($_SESSION['orderStatus']==0): ?>
-    <div class="alert alert-danger m-auto mb-5" style="width: 50%;" role="alert">Selected quantity no longer available!
+    <div class="alert alert-danger m-auto mb-5" style="width: 50%;font-family:candara;letter-spacing: 0.05em;" role="alert">Selected quantity no longer available!
       Item is sold out.. Order can't be done </div>
     <?php unset($_SESSION['Ordersuccess']); ?>
     <?php else: ?>
-    <div class="alert alert-danger m-auto mb-5" style="width: 50%;" role="alert">Selected quantity no longer available!
+    <div class="alert alert-danger m-auto mb-5" style="width: 50%;font-family:candara;letter-spacing: 0.05em;" role="alert">Selected quantity no longer available!
       Only <?php echo $_SESSION['orderStatus'] ?> Left.. Order can't be done </div>
     <?php unset($_SESSION['Ordersuccess']); ?>
     <?php endif; ?>
     <?php endif; ?>
     <?php if($itemCount==0): ?>
-    <div class="alert alert-info m-auto mb-5" style="width: 50%;" role="alert">Cart is Empty</div>
+    <div class="alert alert-info m-auto mb-5" style="width: 50%;font-family:candara;letter-spacing: 0.05em;" role="alert" >Cart is Empty!</div>
     <?php endif; ?>
     <div class="row row-of-card g-5 justify-content-start align-items-center">
       <?php
@@ -94,13 +94,13 @@ if(isset($_GET['Ordersuccess'])&&$_GET['Ordersuccess']==='false'){
             <h4 class="card-title"> <?php echo $finalPrice ?> $</h4>
             <div class="card-body">
               <a href="reviewItem.php?do=Manage&itemId=<?php echo $k['itemId']; ?>&itemName=<?php echo $k['title']; ?>"
-                class="btn btn-warning ">Edit quantity</a>
+                class="btn btn-warning " style = "font-family:candara;letter-spacing: 0.05em;">Edit quantity</a>
                 <?php if (getCategoryNameById($db, $k['itemId']) == "GAME"): ?>
                   <a href="cart.php?itemID=<?php echo $k['itemId']?>&userID=<?php echo $_SESSION['id']?>&orderPrice=<?php echo $finalPrice?>&qty=<?php echo $k['quantity']?>"
                   class="btn btn-primary">PayNow</a>
                 <?php else: ?>
                   <a href="checkout.php"
-                    class="btn btn-primary">Order Item</a>
+                    class="btn btn-primary" style = "font-family:candara;letter-spacing: 0.05em;">Order Item</a>
                 <?php endif; ?>
             </div>
           </div>

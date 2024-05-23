@@ -149,6 +149,11 @@
   font-size: 13px;
   font-weight: 600;
 }
+
+.add-to-cart-btn:hover{
+  border-color: red;
+}
+
 .product .price .old-price {
   font-size: small;
   text-decoration: line-through;
@@ -211,6 +216,10 @@
   border-radius: 10px;
   cursor: pointer;
 }
+.order-section .add-to-cart-btn:hover {
+  background-color: rgb(243, 248, 107);
+}
+
 .add-to-cart {
   padding: 50px;
   margin: 50px auto;

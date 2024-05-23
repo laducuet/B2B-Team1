@@ -224,8 +224,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="your-order mb-30 ">
+                        <div class="col-lg-6" > 
+                            <div class="your-order mb-30 " style = "box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;">
                                 <h3>Your order</h3>
                                 <div class="your-order-table table-responsive">
                                     <table>

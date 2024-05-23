@@ -75,7 +75,7 @@
 									?>">
 								</a>
 								<div class="product-detail" style = "display:flex;flex-direction:column;justify-content: center; align-items: center;padding:10px;">
-									<h3 style><?php echo $cat['categoryName'] ?></h3>
+									<h3 style = "font-family:candara;letter-spacing: 0.05em; font-size: 1.2em; font-weight: bold;"><?php echo $cat['categoryName'] ?></h3>
 									<a href="<?php echo "childcat.php?cat=".urlencode($cat['categoryId']); ?>" style="font-family:candara;">VIEW MORE</a>
 								</div>
 							</div>

@@ -7,9 +7,9 @@
 					</div>
 					<div class="widget-content">
 						<ul>
-							<li><a href="about.php" style = "font-family:candara;">About</a></li>
-							<li><a href="Instructions.php"style = "font-family:candara;">Instructions</a></li>
-							<li><a href="term.php"style = "font-family:candara;">Terms & Conditions</a></li>
+							<li><a href="about.php" style = "font-family:candara;font-weight:bold;font-size:16px;">About</a></li>
+							<li><a href="Instructions.php" style = "font-family:candara;font-weight:bold;font-size:16px;">Instructions</a></li>
+							<li><a href="term.php" style = "font-family:candara;font-weight:bold;font-size:16px;">Terms & Conditions</a></li>
 						</ul>
 					</div>
 				</div>

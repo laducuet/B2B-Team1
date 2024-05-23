@@ -46,17 +46,17 @@ $itemIDs = getItemIDsBySellerID($_SESSION['id'], $db);
                         $buyer = getBuyerById($orderbyitemId[$j]['buyerId'], $db)[0];
                     ?>
                     <tr>
-                        <th scope="row"><?= $stt ?></th>
-                        <td> <?= $orderbyitemId[$j]['orderPrice'] ?> </td>
-                        <td> <?= $orderbyitemId[$j]['quantity'] ?> </td>
-                        <td> <?= $orderbyitemId[$j]['orderDate'] ?></td>
-                        <td> <?= $buyer->userName ?> </td>
+                        <th style = "font-family:candara;letter-spacing: 0.05em;"scope="row"><?= $stt ?></th>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;"> <?= $orderbyitemId[$j]['orderPrice'] ?> </td>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;"> <?= $orderbyitemId[$j]['quantity'] ?> </td>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;"> <?= $orderbyitemId[$j]['orderDate'] ?></td>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;"> <?= $buyer->userName ?> </td>
                         <?php if ($orderbyitemId[$j]['isShip']): ?>
-                        <td>
-                            <a href="details.php?itemid=<?=$orderbyitemId[$j]['itemId']?>&buyerId=<?=$orderbyitemId[$j]['buyerId']?>&billId=<?=$orderbyitemId[$j]['billId']?>" class="btn btn-primary">View</a>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;">
+                            <a style = "font-family:candara;letter-spacing: 0.05em;" href="details.php?itemid=<?=$orderbyitemId[$j]['itemId']?>&buyerId=<?=$orderbyitemId[$j]['buyerId']?>&billId=<?=$orderbyitemId[$j]['billId']?>" class="btn btn-primary">View</a>
                         </td>
                         <?php else: ?>
-                        <td>
+                        <td style = "font-family:candara;letter-spacing: 0.05em;">
                         </td>
                     <?php endif; ?>
                     </tr>

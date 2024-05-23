@@ -145,7 +145,7 @@ header("Location: signin.php");
 </form>
 				</div>
 			</div> <!-- menu -->
-				<div class="shop-icon">
+				<div class="shop-icon" style= "width: 15%;">
           <div class="dropdown" style = "margin-right: 5px;">
           <a href="signin.php">
 						<img src="img/icons/signin.png">

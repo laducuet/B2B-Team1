@@ -39,8 +39,8 @@ if ($do == 'Manage') {
           <?php endif ?>
 
 
-<div class="container shadow mt-5 mb-5">
-  <section class="review-item">
+<div class="container mt-5 mb-5" style = "box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px; border-radius: 10px">
+  <section class="review-item" >
     <div class="gallery">
       <!-- the main image -->
       <div id="screen">
@@ -60,34 +60,34 @@ if ($do == 'Manage') {
         ?>
       </div>
     </div>
-    <div class="product">
-      <a class="seller-name" style="text-decoration:none; color:black;"
+    <div class="product" >
+      <a class="seller-name" style = "font-family:candara;font-weight:bold;font-size:16px; text-decoration:none; color:black;"
         href="seller.php?id=<?php echo $item['sellerId'] ?>">By:
         <?php echo $item['fName'] . ' ' . $item['lName']; ?></a>
       <hr>
-      <span class="date-of-item">Added in : <?php echo $item['addDate']; ?></span>
+      <span class="date-of-item" >Added in : <?php echo $item['addDate']; ?></span>
       <?php 
         if ($item['quantity'] == 0) {
           echo '<span class="sold-out">Sold Out</span>';
         }
       ?>
-      <p class="item-name"><?php echo $itemName; ?></p>
-      <p class="description"><?php echo $item['description']; ?></p>
+      <p class="item-name" ><?php echo $itemName; ?></p>
+      <p class="description" style = "font-family:candara;font-size:18px;"><?php echo $item['description']; ?></p>
       <div class="price">
         <?php 
           if ($item['discount'] == 0) {
             echo '<div class="new-price">';
-            echo $item['price'] . "$";
+            echo $item['price'] . " $";
             echo '</div>';
           }else {
-            echo '<div class="new-price">';
-            echo $item['price'] - ($item['price'] * ($item['discount']/100)) . "$";
+            echo '<div class="new-price" >';
+            echo $item['price'] - ($item['price'] * ($item['discount']/100)) . " $";
             echo '</div>';
             echo '<div class="discount">';
             echo $item['discount'] . "%";
             echo '</div>';
-            echo '<div class="old-price">';
-            echo $item['price'] . "$";
+            echo '<div class="old-price" style="font-size: 18px;" >';
+            echo $item['price'] . " $";
             echo '</div>';
           }
         ?>
@@ -105,7 +105,7 @@ if ($do == 'Manage') {
               </div>
               <button class="add-to-cart-btn">
                 <i class="fas fa-shopping-cart"></i>
-                <span>Edit The Cart</span>
+                <span style = "font-family:candara;font-weight:bold;font-size:20px;">Edit The Cart</span>
               </button>
             </form>';
           } elseif ($item['quantity'] != 0) {
@@ -114,12 +114,12 @@ if ($do == 'Manage') {
         method="POST">
         <div class="counter">
           <span class="left-btn" onclick="ereasing()"><i class="fas fa-minus"></i></span>
-          <input type="number" id="amount" min="1" name="quan">
+          <input type="number" id="amount" min="1" name="quan" value="1">
           <span class="right-btn" onclick="adding(<?php echo $item['quantity']; ?>)"><i class="fas fa-plus"></i></span>
         </div>
-        <button class="add-to-cart-btn">
+        <button class="add-to-cart-btn" >
           <i class="fas fa-shopping-cart"></i>
-          <span>Add to cart</span>
+          <span style = "font-family:candara;font-weight:bold;font-size:20px;">Add to cart</span>
         </button>
       </form>
       <?php 
@@ -134,6 +134,7 @@ if ($do == 'Manage') {
     </div>
   </section>
 </div>
+
 
 <?php 
 } elseif ($do == 'Confirm' && isset($_SESSION['id']) && $_SESSION['typeOfUser'] == "buyer") {
@@ -161,24 +162,24 @@ if ($do == 'Manage') {
   } else {
 ?>
 
-<div class="container shadow add-to-cart">
+<div class="container shadow add-to-cart" style="line-height: 2.5;">
   <h1 class="text-center">Add to Cart</h1>
-  <div class="info-section">
-    <div class="item-name"><b>Item:</b> <?php echo $item['title']; ?></div>
-    <div class="final-price"><b>Price:</b> <?php echo $item['price'] - ($item['price'] * ($item['discount']/100)); ?> $
+  <div class="info-section" >
+    <div class="item-name" style="font-size: 20px"><b style="font-size: 20px">Item:</b> <?php echo $item['title']; ?></div>
+    <div class="final-price" style="font-size: 20px"><b style="font-size: 20px">Price:</b> <?php echo $item['price'] - ($item['price'] * ($item['discount']/100)); ?> $
     </div>
     
     <!-- <div class="quantity"><b>Quantity:</b> <//?php echo $num; ?></div> -->
-    <div class="quantity"><b>Quantity:</b> <?php echo $num; ?></div>
-    <div class="total-price"><b>Total Price:</b>
+    <div class="quantity" style="font-size: 20px"><b style="font-size: 20px">Quantity:</b> <?php echo $num; ?></div>
+    <div class="total-price" style="font-size: 20px"><b style="font-size: 20px">Total Price:</b>
       <?php echo $num * ($item['price'] - ($item['price'] * ($item['discount']/100))); ?> $</div>
-    <div class="location"><b>Location:</b> <?php echo $item['homeNumber'] . ', ' .
+    <div class="location" style="font-size: 20px"><b style="font-size: 20px">Location:</b> <?php echo $item['homeNumber'] . ', ' .
                                   $item['street'] . ' ' . $item['city'] . ' ' . $item['country'];?></div>
   </div>
   <form action="?do=Confirm&itemId=<?php echo $itemId ?>&itemName=<?php echo $itemName; ?>&quantity=<?php echo $num; ?>"
     method="POST" class="text-center" method="POST">
-    <button type="submit" name="submit" class="btn btn-success">Confirm</button>
-    <a class="btn btn-danger" href="<?php echo '?do=Manage&itemId=' . $itemId . '&itemName=' . $itemName; ?>">Go Back</a>
+    <button type="submit" name="submit" class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Confirm</button>
+    <a class="btn btn-danger" href="<?php echo '?do=Manage&itemId=' . $itemId . '&itemName=' . $itemName; ?>" style = "font-family:candara;letter-spacing: 0.05em;">Go Back</a>
   </form>
 </div>
 
@@ -203,26 +204,25 @@ if ($do == 'Manage') {
   } else {
 ?>
 
-<div class="container shadow add-to-cart">
+<div class="container shadow add-to-cart" style="line-height: 2.5;">
   <h1 class="text-center">Edit The Cart</h1>
   <div class="info-section">
-    <div class="item-name"><b>Item:</b> <?php echo $item['title']; ?></div>
-    <div class="final-price"><b>Price:</b> <?php echo $item['price'] - ($item['price'] * ($item['discount']/100)); ?> $
+    <div class="item-name" style="font-size: 20px"><b style="font-size: 20px">Item:</b> <?php echo $item['title']; ?></div>
+    <div class="final-price"style="font-size: 20px"><b style="font-size: 20px">Price:</b> <?php echo $item['price'] - ($item['price'] * ($item['discount']/100)); ?> $
     </div>
-    <div class="quantity"><b>Quantity:</b> <?php echo $num; ?></div>
-    <div class="total-price"><b>Total Price:</b>
+    <div class="quantity"style="font-size: 20px"><b style="font-size: 20px">Quantity:</b> <?php echo $num; ?></div>
+    <div class="total-price"style="font-size: 20px"><b style="font-size: 20px">Total Price:</b>
       <?php echo $num * ($item['price'] - ($item['price'] * ($item['discount']/100))); ?> $</div>
-    <div class="location"><b>Location:</b> <?php echo $item['homeNumber'] . ', ' .
+    <div class="location"style="font-size: 20px"><b style="font-size: 20px">Location:</b> <?php echo $item['homeNumber'] . ', ' .
                                   $item['street'] . ' ' . $item['city'] . ' ' . $item['country'];?></div>
   </div>
   <form action="?do=Update&itemId=<?php echo $itemId ?>&itemName=<?php echo $itemName; ?>&quantity=<?php echo $num; ?>"
     method="POST" class="text-center" method="POST">
-    <button type="submit" name="submit" class="btn btn-success">Confirm</button>
-    <a class="btn btn-danger" href="<?php echo '?do=Manage&itemId=' . $itemId . '&itemName=' . $itemName; ?>">Go
+    <button type="submit" name="submit" class="btn btn-success" style = "font-family:candara;letter-spacing: 0.05em;">Confirm</button>
+    <a class="btn btn-danger" href="<?php echo '?do=Manage&itemId=' . $itemId . '&itemName=' . $itemName; ?>" style = "font-family:candara;letter-spacing: 0.05em;">Go
       Back</a>
   </form>
 </div>
-
 
 <?php
     }

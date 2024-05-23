@@ -42,7 +42,7 @@
   <h1 class="text-center">Manage Admins</h1>
   <form action="?do=Manage" method="POST" class="search-form">
     <div class="name">
-      <div>UserName:</div>
+      <div>Username:</div>
       <input type="text" name="name" class="form-control">
     </div>
     <div class="id">

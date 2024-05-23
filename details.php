@@ -30,61 +30,61 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>First Name <span class="required">*</span></label>
-                                            <input type="text" placeholder="" name="firstname" value="<?php echo $bill[0]['firstname'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">First Name <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="" name="firstname" value="<?php echo $bill[0]['firstname'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>Last Name <span class="required">*</span></label>
-                                            <input type="text" placeholder="" name="lastname" value="<?php echo $bill[0]['lastname'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Last Name <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="" name="lastname" value="<?php echo $bill[0]['lastname'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <label>Company Name</label>
-                                            <input type="text" placeholder="" name="companyname" value="<?php echo $bill[0]['companyname'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Company Name</label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="" name="companyname" value="<?php echo $bill[0]['companyname'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <label>Address <span class="required">*</span></label>
-                                            <input type="text" placeholder="Street address" name="address" value="<?php echo $bill[0]['address'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Address <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="Street address" name="address" value="<?php echo $bill[0]['address'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <input type="text" placeholder="Apartment, suite, unit etc. (optional)" name="optional" value="<?php echo $bill[0]['optional'] ?>">
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="Apartment, suite, unit etc. (optional)" name="optional" value="<?php echo $bill[0]['optional'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <label>Town / City <span class="required">*</span></label>
-                                            <input type="text" placeholder="Town / City"  name="city" value="<?php echo $bill[0]['city'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Town / City <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="Town / City"  name="city" value="<?php echo $bill[0]['city'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>State / County <span class="required">*</span></label>
-                                            <input type="text" placeholder="" name="country" value="<?php echo $bill[0]['country'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">State / County <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;" type="text" placeholder="" name="country" value="<?php echo $bill[0]['country'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>Postcode / Zip <span class="required">*</span></label>
-                                            <input type="text" placeholder="Postcode / Zip"  name="postcode" value="<?php echo $bill[0]['postcode'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Postcode / Zip <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="Postcode / Zip"  name="postcode" value="<?php echo $bill[0]['postcode'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>Email Address <span class="required">*</span></label>
-                                            <input type="email" placeholder="" name="email" value="<?php echo $bill[0]['email'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Email Address <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="email" placeholder="" name="email" value="<?php echo $bill[0]['email'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="checkout-form-list">
-                                            <label>Phone <span class="required">*</span></label>
-                                            <input type="text" placeholder="Postcode / Zip" name="phone" value="<?php echo $bill[0]['phone'] ?>">
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Phone <span class="required">*</span></label>
+                                            <input style = "font-family:candara;letter-spacing: 0.05em;"type="text" placeholder="Postcode / Zip" name="phone" value="<?php echo $bill[0]['phone'] ?>">
                                         </div>
                                     </div>
 
@@ -92,8 +92,8 @@
                                 <div class="different-address">
                                     <div class="order-notes">
                                         <div class="checkout-form-list">
-                                            <label>Order Notes</label>
-                                            <textarea id="checkout-mess"  name="notes" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." value="<?php echo $bill[0]['notes'] ?>"></textarea>
+                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Order Notes</label>
+                                            <textarea style = "font-family:candara;letter-spacing: 0.05em;"id="checkout-mess"  name="notes" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." value="<?php echo $bill[0]['notes'] ?>"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -105,33 +105,33 @@
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th class="product-name">Product</th>
-                                                <th class="product-total">Total</th>
+                                                <th style = "font-family:candara;letter-spacing: 0.05em;"class="product-name">Product</th>
+                                                <th style = "font-family:candara;letter-spacing: 0.05em;"class="product-total">Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="cart_item">
-                                                <td class="product-name">
+                                                <td style = "font-family:candara;letter-spacing: 0.05em;"class="product-name">
                                                     Items <strong class="product-quantity"></strong>
                                                 </td>
-                                                <td class="product-total">
-                                                    <span class="amount"><?php echo $itemName; ?></span>
+                                                <td style = "font-family:candara;letter-spacing: 0.05em;"class="product-total">
+                                                    <span style = "font-family:candara;letter-spacing: 0.05em;" class="amount"><?php echo $itemName; ?></span>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                            <tr class="shipping">
-                                                <th>Payment Method</th>
+                                            <tr style = "font-family:candara;letter-spacing: 0.05em;"class="shipping">
+                                                <th style = "font-family:candara;letter-spacing: 0.05em;">Payment Method</th>
                                                 <td>
                                                     <ul>
                                                         <?php if($bill[0]['isShip'] == 0): ?>
                                                         <li>
-                                                            <label>
+                                                            <label style = "font-family:candara;letter-spacing: 0.05em;">
                                                                 Pay Now: <span class="amount">$</span>
                                                             </label>
                                                         </li>
                                                         <?php else: ?>
                                                         <li>
-                                                            <label>Payment on delivery</label>
+                                                            <label style = "font-family:candara;letter-spacing: 0.05em;">Payment on delivery</label>
                                                         </li>
                                                         <?php endif; ?>
                                                     </ul>
@@ -141,7 +141,7 @@
                                     </table>
                                 </div>
                                 <div class="order-button-payment mt-20">
-                                    <button onclick="window.history.back()" type="submit" class="tp-btn-h1">RETURN</button>
+                                    <button style = "font-family:candara;letter-spacing: 0.05em;" onclick="window.history.back()" type="submit" class="tp-btn-h1">RETURN</button>
                                 </div>
                             </div>
                         </div>
