@@ -178,14 +178,14 @@ $deletedItems = getSellerDeletedItems($_GET['id'], $db);
             ?>
             <?php echo '       
                     <div class="card-body">
-                                <h5 class="card-title">' . $forSaleItem->title . '</h5>
+                                <h5 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;font-weight:bold;">' . $forSaleItem->title . '</h5>
                                 
-                                <h6 class="card-title">' . $childcategory->childcategoryName . '</h6>
-                                <p class="card-text">' . $forSaleItem->description . '</p>
-                                <h4 class="card-title">' . $forSaleItem->price . '$</h4>
-                                <h6 class="card-title">' . $forSaleItem->addDate . '</h6>
+                                <h6 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;">' . $childcategory->childcategoryName . '</h6>
+                                <p class="card-text" style = "font-family:candara;letter-spacing: 0.05em;">' . $forSaleItem->description . '</p>
+                                <h4 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;">' . $forSaleItem->price . '$</h4>
+                                <h6 class="card-title" style = "font-family:candara;letter-spacing: 0.05em;">' . $forSaleItem->addDate . '</h6>
                                 <a href="reviewItem.php?do=Manage&itemId=' . $forSaleItem->itemId . '&itemName=' . $forSaleItem->title . '" 
-                                class="btn btn-outline-success btn-lg">View</a>
+                                class="btn btn-outline-success btn-lg" style = "font-family:candara;letter-spacing: 0.05em;">View</a>
                             </div>
                             </a>
                         </div>

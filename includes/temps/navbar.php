@@ -111,7 +111,7 @@ header("Location: signin.php");
       <?php foreach($Notifications as $noti): ?>
       <?php if($noti['seen']===1): ?>
       <?php $_SESSION['noOfOldNotification'] = $_SESSION['noOfOldNotification'] +1; ?>
-      <li><a class="dropdown-item" href="notification.php"><?php echo
+      <li><a class="dropdown-item" href="notification.php" style = "font-family:candara;letter-spacing: 0.05em;"><?php echo
        "Notification From ". $noti['fName']." ".$noti['lName']; ?></a></li>
       <?php endif; ?>
       <?php endforeach; ?>
